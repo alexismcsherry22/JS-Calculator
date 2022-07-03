@@ -1,0 +1,128 @@
+@use "./typography";
+
+%black-buttons
+{
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  height: 70px;
+  width: 70px;
+  margin: 5px;
+  border: 3px groove rgb(31, 31, 31);
+}
+
+main
+{
+  color: white;
+}
+
+.calculator
+{
+  height: 700px;
+  width: 500px;
+  border: 5px groove rgb(30, 29, 29);
+  border-radius: 35px;
+  background-color: rgb(21, 21, 21);
+
+  &__top
+  {
+    display: flex;
+    justify-content: space-around;
+
+    &--header
+    {
+      font-size: 20px;
+      margin-top: 15px;
+    }
+
+    &--red-box
+    {
+      height: 30px;
+      width: 150px;
+      background-color: rgb(182, 8, 8);
+      margin-top: 10px;
+    }
+
+    &--para
+    {
+      font-size: 10px;
+      margin-top: 18px;
+      margin-right: 40px;
+    }
+  }
+
+  &__display
+  {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    height: 100px;
+    background-color: greenyellow;
+    margin: 10px;
+    border: 4px groove greenyellow; 
+    
+
+    &--text-box
+    {
+      color: black;
+      text-align: right;
+      margin: 0px;
+      font-family: typography.$digital7;
+      font-size: 100px;
+    }
+  }
+
+  &__buttons
+  {
+    @extend %black-buttons;
+  }
+
+  &__buttons:hover
+  {
+    cursor: pointer;
+  }
+
+  &__buttons:active
+  {
+    background-color: rgb(30, 28, 28);
+  }
+
+  &__two-row
+  {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+  }
+
+  &__five-row
+  {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__four-row
+  {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    margin-top: -80px;
+  }
+}
+
+#muButton
+{
+  margin-right: 25px;
+}
+
+#uniqueSymbol
+{
+  font-size: 40px;
+}
+
+#plusButton
+{
+  font-size: 40px;
+  height: 150px;
+}
