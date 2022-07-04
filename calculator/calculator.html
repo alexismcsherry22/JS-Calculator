@@ -15,82 +15,82 @@
       <div class="calculator__top--red-box"><br></div>
       <p class="calculator__top--para">MX-8B</p>
     </section>
-    <section class="calculator__display">
-      <p class="calculator__display--text-box">
-        0123456789
+    <section class="calculator__display" id="displayBox">
+      <p class="calculator__display--text-box" id="calculationPara">
+        0000000000
       </p>
     </section>
     <section class="calculator__two-row">
       <button class="calculator__buttons" id="muButton">
         MU
       </button>
-      <button class="calculator__buttons">
+      <button class="calculator__buttons" id="offButton" onclick="turnOffScreen('rgb(115, 170, 32)', 'rgb(137, 196, 50)', 'rgb(77, 76, 76)')">
         OFF
       </button>
     </section>
     <section class="calculator__five-row">
-      <button class="calculator__buttons">
+      <button class="calculator__buttons" id="mcButton">
         MC
       </button>
-      <button class="calculator__buttons">
+      <button class="calculator__buttons" id="mrButton">
         MR
       </button>
-      <button class="calculator__buttons">
+      <button class="calculator__buttons" id="msubButton">
         M-
       </button>
-      <button class="calculator__buttons">
+      <button class="calculator__buttons" id="mplusButton">
         M+
       </button>
-      <button class="calculator__buttons" id="uniqueSymbol">
+      <button class="calculator__buttons uniqueSymbol" id="divideButton">
         &divide;
       </button>
     </section>
     <section class="calculator__five-row">
-      <button class="calculator__buttons"
-      id="uniqueSymbol">
+      <button class="calculator__buttons uniqueSymbol"
+      id="sqrButton">
         &radic;
       </button>
-      <button class="calculator__buttons">
+      <button class="calculator__buttons" id="sevenButton" onclick="displayInput(7)">
         7
       </button>
-      <button class="calculator__buttons">
+      <button class="calculator__buttons" id="eightButton" onclick="displayInput(8)">
         8
       </button>
-      <button class="calculator__buttons">
+      <button class="calculator__buttons" id="nineButton" onclick="displayInput(9)">
         9
       </button>
-      <button class="calculator__buttons" id="uniqueSymbol">
+      <button class="calculator__buttons uniqueSymbol" id="timesButton">
         &times;
       </button>
     </section>
     <section class="calculator__five-row">
-      <button class="calculator__buttons" id="uniqueSymbol">
+      <button class="calculator__buttons uniqueSymbol" id="percentButton">
         &percnt;
       </button>
-      <button class="calculator__buttons">
+      <button class="calculator__buttons" id="fourButton" onclick="displayInput(4)">
         4
       </button>
-      <button class="calculator__buttons">
+      <button class="calculator__buttons" id="fiveButton" onclick="displayInput(5)">
         5
       </button>
-      <button class="calculator__buttons">
+      <button class="calculator__buttons" id="sixButton" onclick="displayInput(6)">
         6
       </button>
-      <button class="calculator__buttons" id="uniqueSymbol">
+      <button class="calculator__buttons uniqueSymbol" id="minusButton">
         &minus;
       </button>
     </section>
     <section class="calculator__five-row">
-      <button class="calculator__buttons" id="uniqueSymbol">
+      <button class="calculator__buttons uniqueSymbol" id="plusminusButton">
         &plusmn;
       </button>
-      <button class="calculator__buttons">
+      <button class="calculator__buttons" id="oneButton" onclick="displayInput(1)">
         1
       </button>
-      <button class="calculator__buttons">
+      <button class="calculator__buttons" id="twoButton" onclick="displayInput(2)">
         2
       </button>
-      <button class="calculator__buttons">
+      <button class="calculator__buttons" id="threeButton" onclick="displayInput(3)">
         3
       </button>
       <button class="calculator__buttons" id="plusButton">
@@ -98,16 +98,16 @@
       </button>
     </section>
     <section class="calculator__four-row">
-      <button class="calculator__buttons">
+      <button class="calculator__buttons" id="acButton" onclick="turnOnAndClearScreen('greenyellow', 'greenyellow', 'black')">
         AC
       </button>
-      <button class="calculator__buttons">
+      <button class="calculator__buttons" id="zeroButton" onclick="displayInput(0)">
         0
       </button>
-      <button class="calculator__buttons" id="uniqueSymbol">
+      <button class="calculator__buttons uniqueSymbol" id="decimalButton" onclick="displayInput('.')">
         .
       </button>
-      <button class="calculator__buttons" id="uniqueSymbol">
+      <button class="calculator__buttons uniqueSymbol" id="equalsButton">
         &equals;
       </button>
     </section>
