@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="functions.js"></script>
 </head>
 <body>
   <main class="calculator">
@@ -24,7 +23,7 @@
       <button class="calculator__buttons" id="muButton">
         MU
       </button>
-      <button class="calculator__buttons" id="offButton" onclick="turnOffScreen('rgb(115, 170, 32)', 'rgb(137, 196, 50)', 'rgb(77, 76, 76)')">
+      <button class="calculator__buttons" id="offButton">
         OFF
       </button>
     </section>
@@ -50,13 +49,13 @@
       id="sqrButton">
         &radic;
       </button>
-      <button class="calculator__buttons" id="sevenButton" onclick="displayInput(7)">
+      <button class="calculator__buttons" id="sevenButton">
         7
       </button>
-      <button class="calculator__buttons" id="eightButton" onclick="displayInput(8)">
+      <button class="calculator__buttons" id="eightButton">
         8
       </button>
-      <button class="calculator__buttons" id="nineButton" onclick="displayInput(9)">
+      <button class="calculator__buttons" id="nineButton">
         9
       </button>
       <button class="calculator__buttons uniqueSymbol" id="timesButton">
@@ -67,13 +66,13 @@
       <button class="calculator__buttons uniqueSymbol" id="percentButton">
         &percnt;
       </button>
-      <button class="calculator__buttons" id="fourButton" onclick="displayInput(4)">
+      <button class="calculator__buttons" id="fourButton">
         4
       </button>
-      <button class="calculator__buttons" id="fiveButton" onclick="displayInput(5)">
+      <button class="calculator__buttons" id="fiveButton">
         5
       </button>
-      <button class="calculator__buttons" id="sixButton" onclick="displayInput(6)">
+      <button class="calculator__buttons" id="sixButton">
         6
       </button>
       <button class="calculator__buttons uniqueSymbol" id="minusButton">
@@ -84,13 +83,13 @@
       <button class="calculator__buttons uniqueSymbol" id="plusminusButton">
         &plusmn;
       </button>
-      <button class="calculator__buttons" id="oneButton" onclick="displayInput(1)">
+      <button class="calculator__buttons" id="oneButton">
         1
       </button>
-      <button class="calculator__buttons" id="twoButton" onclick="displayInput(2)">
+      <button class="calculator__buttons" id="twoButton">
         2
       </button>
-      <button class="calculator__buttons" id="threeButton" onclick="displayInput(3)">
+      <button class="calculator__buttons" id="threeButton">
         3
       </button>
       <button class="calculator__buttons" id="plusButton">
@@ -98,13 +97,13 @@
       </button>
     </section>
     <section class="calculator__four-row">
-      <button class="calculator__buttons" id="acButton" onclick="turnOnAndClearScreen('greenyellow', 'greenyellow', 'black')">
+      <button class="calculator__buttons" id="acButton">
         AC
       </button>
-      <button class="calculator__buttons" id="zeroButton" onclick="displayInput(0)">
+      <button class="calculator__buttons" id="zeroButton">
         0
       </button>
-      <button class="calculator__buttons uniqueSymbol" id="decimalButton" onclick="displayInput('.')">
+      <button class="calculator__buttons uniqueSymbol" id="decimalButton">
         .
       </button>
       <button class="calculator__buttons uniqueSymbol" id="equalsButton">
@@ -113,4 +112,5 @@
     </section>
   </main>
 </body>
+<script type="module" src="main.js"></script>
 </html>
