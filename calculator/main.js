@@ -54,6 +54,8 @@ const eight = document.querySelector("#eightButton");
 const nine = document.querySelector("#nineButton");
 const decimal = document.querySelector("#decimalButton");
 
+// const numberString = document.getElementById("calculationPara");
+
 zero.addEventListener("click", () => {
   document.getElementById("calculationPara").innerHTML += 0;
   console.log(document.getElementById("calculationPara").innerHTML);
@@ -117,3 +119,28 @@ decimal.addEventListener("click", () => {
     console.log(document.getElementById("calculationPara").innerHTML);
   }
 });*/
+
+//All symbols for calculation
+unique = document.querySelectorAll(".uniqueSymbol");
+
+squareRoot = document.querySelector("#sqrButton");
+divide = document.querySelector("#divideButton");
+multiply = document.querySelector("#timesButton");
+percent = document.querySelector("#percentButton");
+subtract = document.querySelector("#minusButton");
+plusMinus = document.querySelector("#plusminusButton");
+addition = document.querySelector("#plusButton");
+equals = document.querySelector("#equalsButton");
+
+unique.forEach(button => {
+  button.addEventListener("click", () => {
+
+  })
+})
+
+
+// let previousNumber;
+// let currentNumber;
+// appendNumber(num) {
+
+// }
