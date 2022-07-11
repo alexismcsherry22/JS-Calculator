@@ -50,7 +50,7 @@ Syntax:
    if operandOne !== 0 (default number)
    then operandTwo = number
    else if operandOne > 0 && operandTwo > 0
-   then operandOne (arthmetic e.g. += \*=) operandTwo
+   then operandOne (arthmetic e.g. += \*=) operandOne
    and operandTwo = number
    else
    operandOne = number

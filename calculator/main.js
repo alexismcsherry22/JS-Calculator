@@ -54,8 +54,6 @@ const eight = document.querySelector("#eightButton");
 const nine = document.querySelector("#nineButton");
 const decimal = document.querySelector("#decimalButton");
 
-// const numberString = document.getElementById("calculationPara");
-
 zero.addEventListener("click", () => {
   document.getElementById("calculationPara").innerHTML += 0;
   console.log(document.getElementById("calculationPara").innerHTML);
@@ -111,15 +109,6 @@ decimal.addEventListener("click", () => {
   console.log(document.getElementById("calculationPara").innerHTML);
 });
 
-/*const displayInput = (value, () =>
-{
-  if(calculatorState === true) 
-  {
-    document.getElementById("calculationPara").innerHTML += value;
-    console.log(document.getElementById("calculationPara").innerHTML);
-  }
-});*/
-
 //All symbols for calculation
 unique = document.querySelectorAll(".uniqueSymbol");
 
@@ -132,15 +121,36 @@ plusMinus = document.querySelector("#plusminusButton");
 addition = document.querySelector("#plusButton");
 equals = document.querySelector("#equalsButton");
 
-unique.forEach(button => {
-  button.addEventListener("click", () => {
 
-  })
+let operandOne = 0;
+let operandTwo = 0;
+
+const convertStrToNum = ((str, math) => {
+  
+  let num = Number(str);
+  console.log(num);
+  if (operandOne > 0)
+  {
+    operandTwo = num;
+    console.log(operandTwo);
+  }
+  else if (operandOne > 0 && operandTwo > 0)
+  {
+
+  }
+  else 
+  {
+    operandOne = num;
+    console.log(operandOne);
+  }
 })
 
 
-// let previousNumber;
-// let currentNumber;
-// appendNumber(num) {
+unique.forEach(button => {
+  button.addEventListener("click", () => {
+    let str = document.getElementById("calculationPara").value;
+    let math = document.querySelector(button);
+    convertStrToNum(str, math);
+  })
+})
 
-// }
