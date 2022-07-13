@@ -51,74 +51,19 @@ offButton.addEventListener("click", () =>
   document.getElementById("calculationPara").style.color = "rgb(77, 76, 76)";
 });
 
-//might need to make multiple unless switch statement / array loop
+//All numbers (and decimal) for operands
+const numButtons = document.querySelectorAll(".number-button");
 
-const zero = document.querySelector("#zeroButton");
-const one = document.querySelector("#oneButton");
-const two = document.querySelector("#twoButton");
-const three = document.querySelector("#threeButton");
-const four = document.querySelector("#fourButton");
-const five = document.querySelector("#fiveButton");
-const six = document.querySelector("#sixButton");
-const seven = document.querySelector("#sevenButton");
-const eight = document.querySelector("#eightButton");
-const nine = document.querySelector("#nineButton");
-const decimal = document.querySelector("#decimalButton");
-
-zero.addEventListener("click", () => {
-  document.getElementById("calculationPara").innerHTML += 0;
-  console.log(document.getElementById("calculationPara").innerHTML);
-});
-
-one.addEventListener("click", () => {
-  document.getElementById("calculationPara").innerHTML += 1;
-  console.log(document.getElementById("calculationPara").innerHTML);
-});
-
-two.addEventListener("click", () => {
-  document.getElementById("calculationPara").innerHTML += 2;
-  console.log(document.getElementById("calculationPara").innerHTML);
-});
-
-three.addEventListener("click", () => {
-  document.getElementById("calculationPara").innerHTML += 3;
-  console.log(document.getElementById("calculationPara").innerHTML);
-});
-
-four.addEventListener("click", () => {
-  document.getElementById("calculationPara").innerHTML += 4;
-  console.log(document.getElementById("calculationPara").innerHTML);
-});
-
-five.addEventListener("click", () => {
-  document.getElementById("calculationPara").innerHTML += 5;
-  console.log(document.getElementById("calculationPara").innerHTML);
-});
-
-six.addEventListener("click", () => {
-  document.getElementById("calculationPara").innerHTML += 6;
-  console.log(document.getElementById("calculationPara").innerHTML);
-});
-
-seven.addEventListener("click", () => {
-  document.getElementById("calculationPara").innerHTML += 7;
-  console.log(document.getElementById("calculationPara").innerHTML);
-});
-
-eight.addEventListener("click", () => {
-  document.getElementById("calculationPara").innerHTML += 8;
-  console.log(document.getElementById("calculationPara").innerHTML);
-});
-
-nine.addEventListener("click", () => {
-  document.getElementById("calculationPara").innerHTML += 9;
-  console.log(document.getElementById("calculationPara").innerHTML);
-});
-
-decimal.addEventListener("click", () => {
-  document.getElementById("calculationPara").innerHTML += ".";
-  console.log(document.getElementById("calculationPara").innerHTML);
-});
+numButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (document.getElementById("calculationPara").innerText.length > 10) {
+      return;
+    } else {
+      document.getElementById("calculationPara").innerText += button.innerText;
+    }
+    console.log(document.getElementById("calculationPara").innerText);
+  })
+})
 
 //All symbols for calculation
 const unique = document.querySelectorAll(".uniqueSymbol");
@@ -131,6 +76,7 @@ const subtract = document.querySelector("#minusButton");
 const plusMinus = document.querySelector("#plusminusButton");
 const addition = document.querySelector("#plusButton");
 const equals = document.querySelector("#equalsButton");
+
 
 
 const combineNumbers = ((str, math) => {
@@ -222,7 +168,12 @@ unique.forEach((button) => {
     console.log(button);
     let str = document.getElementById("calculationPara").innerText;
     let math = button;
+    if (lastMath === 0) {
+      lastMath = button;
+    }
     combineNumbers(str, math);
   })
 })
 
+// create functions for switch
+// set lastMath when addeventlistener
